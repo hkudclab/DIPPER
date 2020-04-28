@@ -1,10 +1,10 @@
 agegrp<-"young"
 OUTDIR<-"DEGs-for-young-DEC5"
-source("step5.DEGs.within.young.only.R")
+source("step5.DEGs.within.young.or.old.only.R")
 
 agegrp<-"old"
 OUTDIR<-"DEGs-for-old-DEC5"
-source("step5.DEGs.within.young.only.R")
+source("step5.DEGs.within.young.or.old.only.R")
 
 
 source("step7.DEGs.young.vs.old.R")
