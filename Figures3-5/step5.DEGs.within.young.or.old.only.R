@@ -45,7 +45,7 @@ Lgenecat<-LNABA2[c(7,5,3,2,4,6)]
 Lgenecat[["nonMatrisome"]]<-setdiff(geneSymb2,unlist(Lgenecat))
 
 #######################################
-pdf("DEG.young.only.DEC4.pdf",width=12)
+pdf(outPDF,width=12)
 	compi<-0
 
 	isOAF<-Compartments
