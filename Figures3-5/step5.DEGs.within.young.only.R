@@ -1,5 +1,4 @@
-agegrp<-"young"
-OUTDIR<-"DEGs-for-young-DEC5"
+
 
 library(scales)
 library(stringr)
