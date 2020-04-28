@@ -108,4 +108,51 @@ pdf("ECM.compositions.venn.Mar20.pdf",height=6,width=10)
 	}
 dev.off()
 
+##########################
+library(ggplot2)
+
+CompartDraw<-function(dati,strMain,flagAge=0){
+	NUMprot<-colSums(!is.na(dati))
+	strMain<-paste0(strMain," (n=",nrow(dati),")")
+
+	AgesFac<-factor(Ages,levels=c("young","old"))
+
+	m1<-aggregate(NUMprot,by=list(AGECompartments),summary,na.rm=T)
+	m2<-aggregate(NUMprot,by=list(AgesFac),summary,na.rm=T)
+
+	dat34<-data.frame(AGECompartments,NUMprot,AgesFac)
+
+	bpp<-boxplot(NUMprot~AGECompartments,
+		main=strMain,
+		las=2,cex.axis=1/2)
+	abline(h=median(m1[[2]][,"Median"]),lty=2,lwd=2,col=3)
+	text(seq(8),m1[[2]][,"Max."],
+		round(m1[[2]][,"Median"],2),
+		xpd=T,col=3)
+
+	p34<- ggplot(dat34, aes(x=AGECompartments, y=NUMprot)) + 
+		geom_violin( scale = "width")+ 
+		geom_boxplot(width=0.4,outlier.shape =NA)+ 
+		geom_jitter(shape=16,size=4, position=position_jitter(0.2))+
+		ggtitle(strMain)
+	plot(p34)
+	if(flagAge==1){
+		tres<-wilcox.test(NUMprot~AgesFac)
+		bpp<-boxplot(NUMprot~AgesFac,
+			main=strMain,
+			las=2,cex.axis=1/2)
+		abline(h=median(m2[[2]][,"Median"]),lty=2,lwd=2,col=3)
+		text(seq(2),m2[[2]][,"Max."],
+			round(m2[[2]][,"Median"],2),
+			xpd=T,col=3)
+		mtext(paste0("Pvalue=",signif(tres$p.value,3)),col=3)
+
+		p34<- ggplot(dat34, aes(x=AgesFac, y=NUMprot)) + 
+  			geom_violin( scale = "width")+ 
+			geom_boxplot(width=0.4,outlier.shape =NA)+ 
+			geom_jitter(shape=16,size=4, position=position_jitter(0.2))+
+			ggtitle(strMain)
+		plot(p34)
+	}
+}
 
