@@ -37,8 +37,8 @@ AP[!AP%in%c("A","P")]<-NA
 LR<-Directions
 LR[!LR%in%c("L","R")]<-NA
 #######################################
-load("G:/kathy-cheah-ddd/resources/MATRISOME.RData")
-load("G:/kathy-cheah-ddd/resources/NABA.break.down.RData")
+load("../resources/MATRISOME.RData")
+load("../resources/NABA.break.down.RData")
 
 LNABA[["Collagens"]]<-as.character(MATRISOME[grep("^COL[0-9]",MATRISOME[,1]),1])
 LNABA2<-LNABA
