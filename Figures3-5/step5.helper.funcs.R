@@ -1,8 +1,8 @@
-source("G:/my-func-lib/CAT_DEGs.R")
+source("../resources/CAT_DEGs.R")
 
-load("G:/kathy-cheah-ddd/resources/MATRISOME.RData")
-load("G:/kathy-cheah-ddd/resources/NABA.break.down.RData")
-load("G:/kathy-cheah-ddd/resources/TF.CD.receptors.human.mouse.RData")
+load("../resources/MATRISOME.RData")
+load("../resources/NABA.break.down.RData")
+load("../resources/TF.CD.receptors.human.mouse.RData")
 
 LNABA[["Collagens"]]<-as.character(MATRISOME[grep("^COL[0-9]",MATRISOME[,1]),1])
 LNABA2<-LNABA
@@ -14,7 +14,7 @@ library(lattice)
 library(gridExtra)
 library(stringr)
 
-load("G:\\kathy-cheah-ddd\\microarray-anita-tiff-viv\\anita.RData")
+load("../resources/anita.RData")
 indAnita<-which(geneSymb2%in%gsub(" .*","",annots[,2]))
 indAnita2<-match(geneSymb2,gsub(" .*","",annots[,2]))
 #indAnita2<-match(intersect(geneSymb2,MATRISOME[,1]),gsub(" .*","",annots[,2]))
