@@ -17,6 +17,8 @@ The mass spectrometry proteomics data have been deposited to the ProteomeXchange
 
 Vivian Tam1,2*, Peikai Chen1*, Anita Yee1, Nestor Solis3, Theo Klein3, Mateusz Kudelko1, Rakesh Sharma4, Wilson Chan1,2,5, Anna Wang6, Christopher Overall3, Lisbet Haglund7, Ed Wu6, Pak C Sham8, Kathryn S E Cheah1, Danny Chan1,2
 
+\* These authors contributed equally to this manuscript
+
 1 School of Biomedical Sciences, The University of Hong Kong, Hong Kong;
 2 The University of Hong Kong Shenzhen of Research Institute and Innovation (HKU-SIRI), Shenzhen, China;
 3 Centre for Blood Research, University of British Columbia, Vancouver, Canada;
@@ -30,3 +32,11 @@ Vivian Tam1,2*, Peikai Chen1*, Anita Yee1, Nestor Solis3, Theo Klein3, Mateusz K
 
 See our pre-print:
 https://www.biorxiv.org/content/10.1101/2020.07.11.192948v3
+
+
+############# Paper #############
+
+(PMID: 33382035) Tam and Chen et al., 2020.
+
+https://elifesciences.org/articles/64940
+
